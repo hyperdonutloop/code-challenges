@@ -33,3 +33,9 @@ def shapeArea(n):
 # what is missing from statue array?
 # [6, 2, 3, 8]
 # sort 
+# [2, 3, 6, 8]
+# check if each one is one greater
+# if it is not one greater return what the number missing
+
+def makeArrayConsecutive2(statues):
+    return (max(statues)-min(statues)+1) - len(statues)
