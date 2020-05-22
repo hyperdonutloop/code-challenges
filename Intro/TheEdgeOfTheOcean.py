@@ -37,5 +37,21 @@ def shapeArea(n):
 # check if each one is one greater
 # if it is not one greater return what the number missing
 
+# Solution 1 - 
 def makeArrayConsecutive2(statues):
     return (max(statues)-min(statues)+1) - len(statues)
+
+# Solution 2
+def makeArrayConsecutive2(statues):
+    statues.sort()
+    firstLoop = 0
+    secondLoop = 1
+    lastItem = len(statues)-1
+    differences = 0
+    while (firstLoop <= lastItem - 1) and (secondLoop <= lastItem):
+        if statues[secondLoop] - statues[firstLoop] > 1:
+            differences += (statues[secondLoop] - statues[firstLoop] - 1)
+        firstLoop += 1
+        secondLoop += 1
+    
+    return differences
