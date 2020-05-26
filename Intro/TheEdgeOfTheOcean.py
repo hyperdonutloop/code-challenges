@@ -39,18 +39,26 @@ def shapeArea(n):
 
 # Solution 1 - 
 def makeArrayConsecutive2(statues):
+    #         8   -    2        + 1 = 7   - 4 = 3
     return (max(statues)-min(statues)+1) - len(statues)
 
 # Solution 2
 def makeArrayConsecutive2(statues):
+    # sorting array from least to greatest
     statues.sort()
+    # loops from 0 - second to last element
     firstLoop = 0
+    # loops from 1 to the last element
     secondLoop = 1
     lastItem = len(statues)-1
+    # diff var keeps track of the number of statues needed to fill between two consecutive numbers (see while loop)
     differences = 0
+    # records number of statues that can go in-between every adjacent pair
     while (firstLoop <= lastItem - 1) and (secondLoop <= lastItem):
+        # if the difference between two consecutive numbers is more than 1
         if statues[secondLoop] - statues[firstLoop] > 1:
             differences += (statues[secondLoop] - statues[firstLoop] - 1)
+        # increment fl and sl as they continue the loop
         firstLoop += 1
         secondLoop += 1
     
