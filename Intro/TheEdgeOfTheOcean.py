@@ -39,7 +39,7 @@ def shapeArea(n):
 
 # Solution 1 - 
 def makeArrayConsecutive2(statues):
-    #         8   -    2        + 1 = 7   - 4 = 3
+    #         8   -      2        + 1 = 7   - 4 = 3
     return (max(statues)-min(statues)+1) - len(statues)
 
 # Solution 2
