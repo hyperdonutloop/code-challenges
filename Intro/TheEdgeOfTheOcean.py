@@ -74,3 +74,17 @@ def makeArrayConsecutive2(statues):
 # return true
 # if it cannot keep going to the end
 # return false
+
+# JS SOLUTION
+# function almostIncreasingSequence(sequence) {
+    # var count = 0;
+    # for(i = 0; i < sequence.length; i++) {
+        # if(sequence[i] <= sequence[i-1]) {
+            # count++;
+            # if(sequence[i] <= sequence[i-2] && sequence[i+1] <= sequence[i-1])
+            # return false;
+        # }
+    # }
+    
+    # return count <= 1;
+# }
