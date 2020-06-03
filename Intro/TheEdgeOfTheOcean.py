@@ -69,22 +69,24 @@ def makeArrayConsecutive2(statues):
 # Note: sequence a0, a1, ..., an is considered to be a strictly increasing if a0 < a1 < ... < an. Sequence containing only one element is also considered to be strictly increasing.
 
 # iterate through array
-# removed item and see if the array be increasing
+# removed item and see if the array is increasing
 # if it is
 # return true
 # if it cannot keep going to the end
 # return false
 
 # JS SOLUTION
-# function almostIncreasingSequence(sequence) {
-    # var count = 0;
-    # for(i = 0; i < sequence.length; i++) {
-        # if(sequence[i] <= sequence[i-1]) {
-            # count++;
-            # if(sequence[i] <= sequence[i-2] && sequence[i+1] <= sequence[i-1])
-            # return false;
-        # }
-    # }
+"""
+function almostIncreasingSequence(sequence) {
+    var count = 0;
+    for(i = 0; i < sequence.length; i++) {
+        if(sequence[i] <= sequence[i-1]) {
+            count++;
+            if(sequence[i] <= sequence[i-2] && sequence[i+1] <= sequence[i-1])
+            return false;
+        }   
+    }
     
-    # return count <= 1;
-# }
+    return count <= 1;
+}
+"""
