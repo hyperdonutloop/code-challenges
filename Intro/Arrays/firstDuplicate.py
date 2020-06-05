@@ -3,3 +3,10 @@ Given an array a that contains only numbers in the range from 1 to a.length, fin
 
 """
 
+# loop through the array
+# keep track of duplicates in separate array
+# if duplicates is less than 1
+# return that number
+# if duplicates is more than 1
+# find the duplicate with the smallest index
+# if there are no elements (no duplicates) return -1
