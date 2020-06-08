@@ -10,3 +10,19 @@ Given an array a that contains only numbers in the range from 1 to a.length, fin
 # if duplicates is more than 1
 # find the duplicate with the smallest index
 # if there are no elements (no duplicates) return -1
+
+def firstDuplicate(a):
+    # making duplicates a set
+    duplicates = set()
+    # for every number in duplicates
+    for i in a:
+        # if the number is in duplicates
+        if i in duplicates:
+            # return that number
+            return i
+        # if the number is not in duplicates, add it to the set
+        else:
+            duplicates.add(i)
+    # if no duplicates, return -1
+    return -1
+                
