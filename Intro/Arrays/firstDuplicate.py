@@ -25,4 +25,3 @@ def firstDuplicate(a):
             duplicates.add(i)
     # if no duplicates, return -1
     return -1
-                
