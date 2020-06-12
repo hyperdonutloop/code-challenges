@@ -24,3 +24,10 @@ def firstNotRepeatingCharacter(s):
     if counts[char] == 1:
       return char
   return "_"
+
+# solution 2 - fast and weird
+def firstNotRepeatingCharacter(s):
+  for i in s:
+    if s.find(i) == s.rfind(i):
+      return i
+  return "_"
