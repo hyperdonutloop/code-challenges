@@ -41,20 +41,20 @@ def firstNotRepeatingCharacter(s):
 firstNotRepeatingCharacter(s)
 
 # solution 2 - fast and weird
-# def firstNotRepeatingCharacter(s):
-#   for i in s:
-#     if s.find(i) == s.rfind(i):
-#       return i
-#   return "_"
+def firstNotRepeatingCharacter(s):
+  for i in s:
+    if s.find(i) == s.rfind(i):
+      return i
+  return "_"
 
-# # solution 3 
-# def firstNotRepeatingCharacter(s):
-#   for i in range(len(s)):
-#     isRepeating = False
-#     for j in range(len(s)):
-#       if s[i] == s[j] and i != j:
-#         isRepeating = True
-#     if not isRepeating:
-#       return s[i]
-#   return "_" 
+# solution 3 
+def firstNotRepeatingCharacter(s):
+  for i in range(len(s)):
+    isRepeating = False
+    for j in range(len(s)):
+      if s[i] == s[j] and i != j:
+        isRepeating = True
+    if not isRepeating:
+      return s[i]
+  return "_" 
 
