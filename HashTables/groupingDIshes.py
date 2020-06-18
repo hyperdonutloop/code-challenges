@@ -11,16 +11,38 @@ Return an array where each element is a list beginning with the ingredient name,
 # Clue 3 - Get a list of values from the hash table, and sort it. It should sort by the first element (i.e. the ingredient) first.
 
 # Found solution one
+dishes = [["Salad", "Tomato", "Cucumber", "Salad", "Sauce"],
+            ["Pizza", "Tomato", "Sausage", "Sauce", "Dough"],
+            ["Quesadilla", "Chicken", "Cheese", "Sauce"],
+            ["Sandwich", "Salad", "Bread", "Tomato", "Cheese"]]
+
 def groupingDishes(dishes):
+  # creating a hashtable
+  # key is the ingredient, the value is array of dishes
     hashTable = {}
+    # iterate through all dishes
     for dish in dishes:
-        for ingredient in dish[1:]:
-            if ingredient in hashTable:
-                hashTable[ingredient].append(dish[0])
-            else:
-                hashTable[ingredient] = [dish[0]]
+      # for every ingredient in the dish 1: slicing grabbing everything after the dish name
+      for ingredient in dish[1:]:
+        # if it is in the hashtable
+        if ingredient in hashTable:
+          # append the dish
+          hashTable[ingredient].append(dish[0])
+        # if it is not in the hashtable
+        else:
+          # put it in. ingredient is the key, value is the dish at the 0 index (the dish)
+          hashTable[ingredient] = [dish[0]]
+    # once program has gone through every array
+    # initialize an answer array
     ans = []
-    for k, v in hashTable.items():
+    # .items returns a view object
+    # VO shows key, value pairs in a tuple list
+    for ing, di in hashTable.items():
+        # if the length of the list is greater than 1
         if len(v) > 1:
-            ans.append([k] + sorted(v))
+            # append the ingredient(k) + dishes you can make(v)
+            ans.append([ing] + sorted(di))
+    # once this loops through return the fully sorted answer
     return sorted(ans)
+
+groupingDishes(dishes)
