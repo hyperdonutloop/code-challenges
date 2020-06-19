@@ -37,12 +37,15 @@ def groupingDishes(dishes):
     ans = []
     # .items returns a view object
     # VO shows key, value pairs in a tuple list
+    print(hashTable.items())
     for ing, di in hashTable.items():
         # if the length of the list is greater than 1
-        if len(v) > 1:
+        if len(di) > 1:
             # append the ingredient(k) + dishes you can make(v)
             ans.append([ing] + sorted(di))
     # once this loops through return the fully sorted answer
     return sorted(ans)
+    
 
 groupingDishes(dishes)
+
