@@ -1,1 +1,1 @@
-# code-challenges
+# Collection of Code Challlenges for Lambda School Endorsement
