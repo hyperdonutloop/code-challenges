@@ -9,3 +9,16 @@ function add(param1, param2) {
 function centuryFromYear(year) {
   return Math.ceil(year/100)
 }
+
+// Given the string, check if it is a palindrome.
+
+function checkPalindrome(inputString) {
+  const splitString = inputString.split('');
+  const reverseString = splitString.reverse().join('');
+
+  if (reverseString == inputString) {
+    return true
+  } else {
+    return false
+  }
+}
