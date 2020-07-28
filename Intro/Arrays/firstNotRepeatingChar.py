@@ -11,6 +11,7 @@ Given a string s consisting of small English letters, find and return the first 
 # return - 
 
 # solution 1
+s = "abacabad"
 def firstNotRepeatingCharacter(s):
   order = []
   counts = {}
@@ -25,20 +26,23 @@ def firstNotRepeatingCharacter(s):
       return char
   return "_"
 
-# solution 2 - fast and weird
-def firstNotRepeatingCharacter(s):
-  for i in s:
-    if s.find(i) == s.rfind(i):
-      return i
-  return "_"
+firstNotRepeatingCharacter(s)
 
-# solution 3 
-def firstNotRepeatingCharacter(s):
-  for i in range(len(s)):
-    isRepeating = False
-    for j in range(len(s)):
-      if s[i] == s[j] and i != j:
-        isRepeating = True
-    if not isRepeating:
-      return s[i]
-  return "_" 
+# solution 2 - fast and weird
+# def firstNotRepeatingCharacter(s):
+#   for i in s:
+#     if s.find(i) == s.rfind(i):
+#       return i
+#   return "_"
+
+# # solution 3 
+# def firstNotRepeatingCharacter(s):
+#   for i in range(len(s)):
+#     isRepeating = False
+#     for j in range(len(s)):
+#       if s[i] == s[j] and i != j:
+#         isRepeating = True
+#     if not isRepeating:
+#       return s[i]
+#   return "_" 
+
