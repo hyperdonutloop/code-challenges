@@ -70,6 +70,7 @@ def areFollowingPatterns(strings, patterns):
     pattern = patterns[i]
     # if string is in stringToPatter HT
     if string in stringToPattern.keys():
+        # print(stringToPattern.keys())
       # and if pattern does not equal string key
         if(pattern != stringToPattern[string]):
             return False
@@ -79,6 +80,7 @@ def areFollowingPatterns(strings, patterns):
         stringToPattern[string] = pattern
     # if pattern is in patternToString HT
     if pattern in patternToString.keys():
+        # print(patternToString.keys())
         # and if string does not equal pattern (in the patternToString HT)
         if(string != patternToString[pattern]):
           return False
