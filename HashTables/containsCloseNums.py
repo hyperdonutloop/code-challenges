@@ -7,22 +7,24 @@ Given an array of integers nums and an integer k, determine whether there are tw
 # Start with an empty hash table hash. When iterating through the list num, store hash[num[i]] = i if num[i] isn't a key in the hash table. If num[i] is a key in the hash table, check if the current index and the last seen index (stored as the value) are within k of each other. 
 # If not, update the last seen index in hash[num[i]] to the current index i.
 
-nums = [0, 1, 2, 3, 5, 2]
+nums = [0, 1, 99, 3, 5, 99]
 k = 3
 
 def containsCloseNums(nums, k):
-  # hashTable = {}
-  # for i in range(len(nums)):
-  #   if nums[i] not in hashTable:
-  #     hashTable[nums[i]] = i
-  #   else:
-  #     if nums[i] 
+  # creates an empty hashtable
   hashTable = {}
+  # enumerate allows us to loop over something and have a counter
+  # for every i/j in nums
   for i, j in enumerate(nums):
+    # if j is in the hashtable AND i - hashtable at j is less than or equal to k
     if j in hashTable and i - hashTable[j] <= k:
+      # return true
       return True
+    # if j is not in the hashtable
     else:
+      # hashtable[j] is key, value is i
       hashTable[j] = i
+  # if no repeating numbers return false
   return False
 
 containsCloseNums(nums, k)
