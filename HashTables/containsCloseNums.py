@@ -11,10 +11,13 @@ nums = [0, 1, 2, 3, 5, 2]
 k = 3
 
 def containsCloseNums(nums, k):
+  hashTable = {}
+  
   # create a hashtable
   # iterate through num list
   # if num[i] is not a key in the HT,
     # store hash[num[i]] = i
+  
   # else if it is
     # check if current index and last seen index are within k of eachother
     # if they are not update the last seen index in hash[num[i]] to the current index i
