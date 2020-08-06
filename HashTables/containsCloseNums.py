@@ -11,10 +11,25 @@ nums = [0, 1, 2, 3, 5, 2]
 k = 3
 
 def containsCloseNums(nums, k):
+  # hashTable = {}
+  # for i in range(len(nums)):
+  #   if nums[i] not in hashTable:
+  #     hashTable[nums[i]] = i
+  #   else:
+  #     if nums[i] 
   hashTable = {}
-  
+  for i, j in enumerate(nums):
+    if j in hashTable and i - hashTable[j] <= k:
+      return True
+    else:
+      hashTable[j] = i
+  return False
+
+containsCloseNums(nums, k)
+
   # create a hashtable
   # iterate through num list
+  # find if nums[i] = nums[j]
   # if num[i] is not a key in the HT,
     # store hash[num[i]] = i
   
